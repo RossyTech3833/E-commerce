@@ -32,8 +32,8 @@ useEffect(() => {
       <Route path='/'  element={<Home/>} />
       <Route path='/items/:id' element={<ProductDesc/>} />
       <Route path='/Acount' element={<Acount/>} />
-      <Route path='Cart' element={<Cart/>} />
-      <Route path='checkout' element={
+      <Route path='/Cart' element={<Cart/>} />
+      <Route path='/checkout' element={
         <ProtectedRoute>
           <Cart/>
         </ProtectedRoute>
