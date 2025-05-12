@@ -1,5 +1,5 @@
 
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import Acount from '../component/Acount'
 import Cart from '../component/Cart'
 import Home from '../component/Home'
