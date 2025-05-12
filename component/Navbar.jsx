@@ -20,13 +20,21 @@ function Navbar() {
     }
   };
 
+  const handleMenuToggle = () => {
+    setMenuOpen(!menuOpen); // Toggle the menu
+  };
+
+  const handleLinkClick = () => {
+    setMenuOpen(false); // Close the menu when a link is clicked
+  };
+
   return (
     <nav className='bg-white fixed top-0 left-0 w-full z-50 shadow-md'>
       <div className='flex justify-between items-center p-4 md:px-10'>
         <h1 className='font-serif text-orange-400 text-lg md:text-2xl'>Roses's World</h1>
 
         {/* Mobile Hamburger Icon */}
-        <button onClick={() => setMenuOpen(!menuOpen)} className='md:hidden text-2xl text-orange-500'>
+        <button onClick={handleMenuToggle} className='md:hidden text-2xl text-orange-500'>
           <GiHamburgerMenu />
         </button>
 
@@ -81,7 +89,7 @@ function Navbar() {
               placeholder='Search...'
               value={searchText}
               onChange={(e) => setSearchText(e.target.value)}
-              className='border border-orange-400 outline-none px-2 py-1 w-full'
+              className='border border-orange-400 outline-none px-2 py-1 md:w-full sm:w-40'
             />
             <button
               onClick={handleSearch}
@@ -91,24 +99,25 @@ function Navbar() {
             </button>
           </div>
 
-          <Link to="/" className='flex items-center gap-2 font-bold'>
+          <Link to="/" className='flex items-center gap-2 font-bold' onClick={handleLinkClick}>
             <CiHome className='text-xl' />
             <span>Home</span>
           </Link>
 
           {user ? (
-            <Link to="/Acount" className='flex items-center gap-2 font-bold'>
+            <Link to="/Acount" className='flex items-center gap-2 font-bold' onClick={handleLinkClick}>
               <IoPersonOutline className='text-xl' />
               <span>Acount</span>
             </Link>
           ) : (
-            <Link to="/Signin" className='flex items-center gap-2 font-bold'>
+            <Link to="/Signin" className='flex items-center gap-2 font-bold' onClick={handleLinkClick}>
               <IoPersonOutline className='text-xl' />
               <span>Signin</span>
             </Link>
           )}
 
-          <Link to="/Cart" className='flex items-center gap-2 font-bold text-orange-400'>
+          <Link to="/Cart" className='flex items-center gap-2 font-bold text-orange-400'
+           onClick={handleLinkClick}>
             <IoCartOutline className='text-2xl animate-bounce' />
             <span>Cart ({cart.length})</span>
           </Link>

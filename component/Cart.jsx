@@ -52,7 +52,7 @@ function Cart() {
                 <button onClick={() => decreaseQty(item.id)} className=' cursor-pointer px-3
                  py-1 bg-orange-500 text-white rounded'>-</button>
                 <button onClick={() => removeFromCart(item.id)} className='cursor-pointer
-                 px-3 py-1  rounded'><RiDeleteBin6Line className='text-red-600 font-2xl' /></button>
+                 px-3 py-1 md:flex sm:flex-cols rounded'><RiDeleteBin6Line className='text-red-600 font-2xl' /></button>
       </div>
      </div>
     </div>

@@ -13,11 +13,12 @@ function Home() {
   return (
     <div className='flex flex-wrap gap-4 p-8 bg-no-repeat bg-cover' style={{backgroundImage:`url(${bgimage})`}}>
  {products.map((items)=>(
-    <div
+    <div className='w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 flex flex-col items-center'
     key={items.id}
    onClick={()=> handleclick(items.id)}
    >
-<img src={items.image} alt={items.name} className='object-cover rounded w-full 
+<img src={items.image} alt={items.name} className='object-cover rounded w-full  sm:w-40 sm:h-40 
+    md:w-48 md:h-48 
  transform hover:scale-105 transition duration-300 ' />
 
 <h2 className='text-lg font-semibold mt-3 text-gray-300'>{items.name}</h2>
