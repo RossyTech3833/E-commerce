@@ -7,20 +7,20 @@ import Navbar from '../component/Navbar'
 import ProductDesc from '../component/ProductDesc'
 import SearchResults from '../component/SearchResults'
 import './App.css'
-import {BrowserRouter as Router,Route,Routes, useLocation, useNavigate} from 'react-router-dom'
+import {BrowserRouter as Router,Route,Routes} from 'react-router-dom'
 import { CartProvider } from '../component/CartContext'
 import ProtectedRoute from '../component/protectedRoute'
 import Footer from '../component/Footer'
 
 function App() {
-const location = useLocation()
-const navigate = useNavigate()
+// const location = useLocation()
+// const navigate = useNavigate()
 
-useEffect(() => {
-  if (location.pathname !== '/') {
-    navigate('/');
-  }
-}, []);
+// useEffect(() => {
+//   if (location.pathname !== '/') {
+//     navigate('/');
+//   }
+// }, []);
 
   return (
     <>

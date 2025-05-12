@@ -5,13 +5,14 @@ import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from '../src/firebase';
 import { FaLongArrowAltDown } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { db } from '../src/firebase'; 
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 
 
 function Acount() {
 
+  const navigate = useNavigate()
   const location = useLocation();
 const cart = location.state?.cart || [];
 
@@ -59,6 +60,8 @@ const cart = location.state?.cart || [];
       });
   
       alert("Order submitted successfully!");
+
+      navigate('/')
   
       // Optionally: redirect or clear local form
     } catch (error) {
@@ -108,8 +111,10 @@ const cart = location.state?.cart || [];
           <a className='' href="https://wa/me/2348138332117?text=Hi%20welcome%20to%Rossy's%20page%20AHow%20can%20i%20be%20of%20help">
           <FaWhatsapp className='text-2xl text-orange-500 items-center m-2'/></a>
           </p>
-        <button className='cursor-pointer bg-orange-500 text-white
-         font-bold p-1 text-2xl'>submit</button>
+        <button type='submit' className='cursor-pointer bg-orange-500 text-white
+         font-bold p-1 text-2xl'>
+        
+          submit</button>
         </form>
       )}
     </div>
