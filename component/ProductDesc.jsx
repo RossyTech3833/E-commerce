@@ -24,7 +24,7 @@ const [added,setAdded] = useState(false)
 if (!items) return <p>products not found</p>
 
   return (
-    <div className='flex flex-col md:flex-row p-8 m-4 justify-center
+    <div className='flex flex-col md:flex-row md:p-8 sm:p-2 m-4 justify-center
      bg-no-repeat bg-cover opacity-0.2 h-screen' style={{backgroundImage:`url(${bgimage})`}}>
  
      <img src={items.image} alt={items.name} className='w-[400px] mt-20'/>

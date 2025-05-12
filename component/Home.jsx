@@ -17,7 +17,7 @@ function Home() {
     key={items.id}
    onClick={()=> handleclick(items.id)}
    >
-<img src={items.image} alt={items.name} className='object-cover rounded w-full  sm:w-40 sm:h-40 
+<img src={items.image} alt={items.name} className='object-cover rounded w-full  sm:w-[100px] sm:h-40 
     md:w-48 md:h-48 
  transform hover:scale-105 transition duration-300 ' />
 
