@@ -25,7 +25,7 @@ function App() {
   return (
     <>
     <CartProvider>
-    <Router>
+    <Router basename="/E-commerce">
       <Navbar/>
       <Routes>
         <Route path='/search/:query' element={<SearchResults/>} />
@@ -38,6 +38,7 @@ function App() {
           <Cart/>
         </ProtectedRoute>
       }/>
+       <Route path="*" element={<Home />} />
       </Routes>
     </Router>
     </CartProvider>
