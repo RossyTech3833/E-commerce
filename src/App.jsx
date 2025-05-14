@@ -25,7 +25,7 @@ function App() {
   return (
     <>
     <CartProvider>
-    <Router basename="/E-commerce">
+    <Router>
       <Navbar/>
       <Routes>
         <Route path='/search/:query' element={<SearchResults/>} />
