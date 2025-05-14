@@ -108,7 +108,7 @@ const cart = location.state?.cart || [];
             and send proof of payment to my whatsapp,make sure you do the payment before
              clicking on the submit button
            
-          <a className='' href="https://wa/me/2348138332117?text=Hi%20welcome%20to%Rossy's%20page%20AHow%20can%20i%20be%20of%20help">
+          <a className=''  href="https://wa.me/2349114089450">
           <FaWhatsapp className='text-2xl text-orange-500 items-center m-2'/></a>
           </p>
         <button type='submit' className='cursor-pointer bg-orange-500 text-white

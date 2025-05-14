@@ -13,14 +13,7 @@ import ProtectedRoute from '../component/protectedRoute'
 import Footer from '../component/Footer'
 
 function App() {
-// const location = useLocation()
-// const navigate = useNavigate()
 
-// useEffect(() => {
-//   if (location.pathname !== '/') {
-//     navigate('/');
-//   }
-// }, []);
 
   return (
     <>

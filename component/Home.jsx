@@ -1,29 +1,36 @@
 import React from 'react'
 import { products } from './Product'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import bgimage from '../src/assets/images/cin.jpg'
-
 
 function Home() {
   const navigate = useNavigate()
-  const handleclick = (id) =>{
+  const handleclick = (id) => {
     navigate(`/items/${id}`)
   }
 
   return (
-    <div className='flex flex-wrap gap-4 p-8 bg-no-repeat bg-cover' style={{backgroundImage:`url(${bgimage})`}}>
- {products.map((items)=>(
-    <div className='w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 flex flex-col items-center'
-    key={items.id}
-   onClick={()=> handleclick(items.id)}
-   >
-<img src={items.image} alt={items.name} className='object-cover rounded md:w-full  sm:w-[100px] 
- transform hover:scale-105 transition duration-300 ' />
-
-<h2 className='text-lg font-semibold mt-3 text-gray-300'>{items.name}</h2>
-<p className='text-sm text-black font-bold text-gray-300'>{items.price}</p>
-   </div>
- ))}
+    <div
+      className="min-h-screen p-8 bg-no-repeat bg-cover flex items-center justify-center"
+      style={{ backgroundImage: `url(${bgimage})` }}
+    >
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl w-full">
+        {products.map((items) => (
+          <div
+            key={items.id}
+            onClick={() => handleclick(items.id)}
+            className="bg-white/10 p-4 rounded-lg cursor-pointer hover:shadow-lg transition-all duration-300 backdrop-blur-md"
+          >
+            <img
+              src={items.image}
+              alt={items.name}
+              className="w-full h-40 object-cover rounded transform hover:scale-105 transition duration-300"
+            />
+            <h2 className="text-md font-semibold mt-3 text-gray-100">{items.name}</h2>
+            <p className="text-sm text-gray-300 font-bold">{items.price}</p>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
