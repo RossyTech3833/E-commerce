@@ -16,7 +16,9 @@ function Navbar() {
 
   const handleSearch = () => {
     if (searchText.trim() !== '') {
-      navigate(`/search/${searchText.toLowerCase()}`);
+      const query = searchText.toLowerCase();
+      setSearchText("");
+      navigate(`/search/${encodeURI(query)}`);
     }
   };
 

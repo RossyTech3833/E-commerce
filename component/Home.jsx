@@ -2,12 +2,28 @@ import React from 'react'
 import { products } from './Product'
 import { useNavigate } from 'react-router-dom'
 import bgimage from '../src/assets/images/cin.jpg'
+import { useCart } from './CartContext'
 
 function Home() {
   const navigate = useNavigate()
   const handleclick = (id) => {
     navigate(`/items/${id}`)
   }
+
+const {addToCart} = useCart();
+const handleAddcart = () =>{
+  addToCart(items)
+  setAdded(true)
+}
+
+const {id} =useParams()
+const items = products.find(items => items.id === parseInt(id))
+
+const [added,setAdded] = useState(false)
+
+if (!items) return <p>products not found</p>
+
+
 
   return (
     <div
@@ -28,6 +44,20 @@ function Home() {
             />
             <h2 className="text-md font-semibold mt-3 text-gray-100">{items.name}</h2>
             <p className="text-sm text-gray-300 font-bold">{items.price}</p>
+
+            {!added ? (
+          <button
+            onClick={handleAddcart}
+            className='border rounded text-gray-400 font-2xl cursor-pointer md:p-4 md:mt-8 bg-orange-500
+             outline-none hover:bg-teal-950 w-[150px] sm:p-2 sm:mt-4'
+          >
+            Add to cart
+          </button>
+        ) : (
+          <p className='text-green-500 mt-8 text-center text-lg font-semibold '>
+           &#10004; Added to cart!
+          </p>
+        )}
           </div>
         ))}
       </div>

@@ -33,7 +33,7 @@ function Cart() {
 
   return (
     <div className="bg-gray-500 opacity-0.2 flex flex-col md:flex-wrap 
-     justify-between items-start p-8 gap-2 bg-no-repeat bg-cover" style={{backgroundImage:`url(${bgimage})`}}>
+     justify-between items-start p-8 gap-2 bg-white">
   <h2>your selected items</h2>
   {cart.length === 0? (
     <p className='mt-6 text-blue-400 p-8'>your cart is empty</p>

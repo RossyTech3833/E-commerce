@@ -16,13 +16,14 @@ function SearchResults() {
   )
 
   return (
-    <div className='flex flex-wrap gap-4 bg-no-repeat bg-cover' style={{backgroundImage:`url(${bgimage})`}}>
+    <div className='flex flex-wrap gap-4 bg-white'>
       <h2 className='text-blue-500 mt-6 p-4 justify-center font-bold text-xl'>
         Your search results for "{query}"
       </h2>
 
       {filteredproducts.length > 0 ? (
-        <div className='flex flex-wrap gap-4 py-4 w-[500px]'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 
+        gap-6 max-w-6xl w-full'>
           {filteredproducts.map((item) => (
             <div
               key={item.id}
