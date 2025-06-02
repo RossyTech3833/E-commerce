@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import bgimage from '../src/assets/images/cin.jpg'
 import { useCart } from './CartContext'
 import { useParams } from 'react-router-dom'
+import { useState } from 'react'
 
 function Home() {
   const navigate = useNavigate()
