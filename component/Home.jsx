@@ -30,7 +30,7 @@ function Home() {
           <div
             key={item.id}
             onClick={() => handleclick(item.id)}
-            className="bg-white/10 p-4 rounded-lg cursor-pointer hover:shadow-lg 
+            className="bg-white/10 rounded-lg cursor-pointer hover:shadow-lg 
             transition-all duration-300 backdrop-blur-md" >
             <img
               src={item.image}
@@ -44,7 +44,7 @@ function Home() {
               <button
                 onClick={(e) => handleAddcart(item, e)}
                 className="border items-center rounded text-gray-400 font-2xl cursor-pointer md:p-4 md:mt-8
-                 bg-orange-500 outline-none hover:bg-teal-950 w-[150px] sm:w-[100px] sm:p-2 sm:mt-4"
+                 bg-orange-500 outline-none hover:bg-teal-950 md:w-[150px] sm:w-[100px] sm:p-2 sm:mt-4"
               >
                 Add to cart
               </button>
