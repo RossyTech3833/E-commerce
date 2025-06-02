@@ -25,17 +25,17 @@ if (!items) return <p>products not found</p>
 
   return (
     <div className='flex flex-col md:flex-row md:p-8 sm:p-2 m-4 justify-center
-     bg-no-repeat bg-cover opacity-0.2 h-screen' style={{backgroundImage:`url(${bgimage})`}}>
+     bg-white opacity-0.2 h-screen'>
  
      <img src={items.image} alt={items.name} className='w-[400px] mt-20'/>
 
 <div className=' flex flex-col p-8 font-bold mt-20'>
-<h1 className='text-white'>{items.price}</h1>
-<p className='text-white'>{items.description}</p>
+<h1 className='text-black'>{items.price}</h1>
+<p className='text-black'>{items.description}</p>
 
 <div className='md:mt-4 br sm:mt-2'>
  <h3 className='text-orange-600'>promotion</h3>
- <p className='text-white'>call 08138332117 to place your order or add to cart to checkout</p>
+ <p className='text-black'>call 08138332117 to place your order or add to cart to checkout</p>
 </div>
 {/* <button onClick={handleAddcart} className='border rounded w-full cursor-pointer px-4 mt-8
 bg-gradient-to-r from-blue-300 to-purple-500 outline-none hover:animate-bounce'>add to cart</button> */}

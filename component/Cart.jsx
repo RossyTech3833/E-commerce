@@ -42,9 +42,9 @@ function Cart() {
       <div key ={index} className=' mt-10 p-8 flex '>
       <img className='w-[100px] object-cover' src={item.image} alt={item.name}/>
      <div className=' p-8 font-bold  '>
-     <h4 className='text-white'>{item.name}</h4>
-      <p className='text-white'>price: N{item.price}</p>
-      <p className='mt-4 text-white'>quantity:{item.quantity}</p>
+     <h4 className='text-black'>{item.name}</h4>
+      <p className='text-black'>price: N{item.price}</p>
+      <p className='mt-4 text-black'>quantity:{item.quantity}</p>
 
       <div className='flex gap-4 mt-4 px-8'>
       <button onClick={() => increaseQty(item.id)} className='cursor-pointer px-3 py-1

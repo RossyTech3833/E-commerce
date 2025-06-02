@@ -39,7 +39,7 @@ function Signin({ onSuccess }) {
   };
 
   return (
-    <div className='p-8 text-white m-8 text-2xl'>
+    <div className='p-8 text-black m-8 text-2xl'>
       <h2 className='sm:text-base md:text-2xl'>Sign in to checkout</h2>
       <button
         onClick={handleGoogleSignIn}

@@ -72,8 +72,7 @@ const cart = location.state?.cart || [];
   
 
   return (
-    <div className='bg-no-repeat bg-cover h-screen flex items-start justify-center pt-10' 
-      style={{ backgroundImage: `url(${bgimage})` }}>
+    <div className='bg-white h-screen flex items-start justify-center pt-10'>
       {!user ? (
         <Signin />
       ) : (
