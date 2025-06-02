@@ -43,8 +43,8 @@ function Home() {
             {added !== item.id ? (
               <button
                 onClick={(e) => handleAddcart(item, e)}
-                className="border flex justify-end rounded text-gray-400 font-2xl cursor-pointer md:p-4 md:mt-8
-                 bg-orange-500 outline-none hover:bg-teal-950 w-[150px] sm:py-2 sm:mt-4"
+                className="border items-center rounded text-gray-400 font-2xl cursor-pointer md:p-4 md:mt-8
+                 bg-orange-500 outline-none hover:bg-teal-950 w-[100px] sm:p-2 sm:mt-4"
               >
                 Add to cart
               </button>
