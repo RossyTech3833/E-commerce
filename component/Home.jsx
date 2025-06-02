@@ -35,7 +35,7 @@ function Home() {
             <img
               src={item.image}
            alt={item.name}
-              className="w-full h-40 object-cover rounded transform hover:scale-105 transition duration-300"
+              className="w-full object-cover rounded transform hover:scale-105 transition duration-300"
             />
             <h2 className="text-md font-semibold mt-3 text-gray-100">{item.name}</h2>
             <p className="text-sm text-gray-300 font-bold">{item.price}</p>
