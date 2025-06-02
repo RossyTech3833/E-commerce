@@ -25,16 +25,16 @@ function Home() {
       className="min-h-screen p-8 bg-no-repeat bg-cover flex items-center justify-center"
       style={{ backgroundImage: `url(${bgimage})` }}
     >
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl w-full">
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl w-full">
         {products.map((item) => (
           <div
             key={item.id}
             onClick={() => handleclick(item.id)}
-            className="bg-white/10 p-4 rounded-lg cursor-pointer hover:shadow-lg transition-all duration-300 backdrop-blur-md"
-          >
+            className="bg-white/10 p-4 rounded-lg cursor-pointer hover:shadow-lg 
+            transition-all duration-300 backdrop-blur-md" >
             <img
               src={item.image}
-              alt={item.name}
+           alt={item.name}
               className="w-full h-40 object-cover rounded transform hover:scale-105 transition duration-300"
             />
             <h2 className="text-md font-semibold mt-3 text-gray-100">{item.name}</h2>
@@ -43,7 +43,8 @@ function Home() {
             {added !== item.id ? (
               <button
                 onClick={(e) => handleAddcart(item, e)}
-                className="border rounded text-gray-400 font-2xl cursor-pointer md:p-4 md:mt-8 bg-orange-500 outline-none hover:bg-teal-950 w-[150px] sm:p-2 sm:mt-4"
+                className="border flex justify-end rounded text-gray-400 font-2xl cursor-pointer md:p-4 md:mt-8
+                 bg-orange-500 outline-none hover:bg-teal-950 w-[150px] sm:py-2 sm:mt-4"
               >
                 Add to cart
               </button>

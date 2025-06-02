@@ -25,9 +25,9 @@ function Cart() {
       console.log(`Calculating: ${item.name} - Price: ${item.price}, Qty: ${item.quantity}`);
       return acc + (Number(item.price) || 0) * (Number(item.quantity) || 0);
     }, 0);
-    
-    (`Total Price: ${totalPrice}`);
-    
+    <p className='text-black'>
+    (`Total Price: N{totalPrice}`);
+    </p>
 
 
 
